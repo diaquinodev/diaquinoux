@@ -528,17 +528,17 @@ function App() {
               </div>
 
               <div className="space-y-4">
-                <Motion.a 
-                  href="mailto:diego@exemplo.com"
+                <Motion.a
+                  href="mailto:diaquinotech@gmail.com"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
                   <Mail className="w-6 h-6 text-primary" />
-                  <span className="text-foreground">diego@exemplo.com</span>
+                  <span className="text-foreground">diaquinotech@gmail.com</span>
                 </Motion.a>
 
-                <Motion.a 
-                  href="https://linkedin.com/in/diegoaquino"
+                <Motion.a
+                  href="https://www.linkedin.com/in/diego-aquino-dev"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -546,8 +546,8 @@ function App() {
                   <span className="text-foreground">LinkedIn</span>
                 </Motion.a>
 
-                <Motion.a 
-                  href="https://wa.me/5511999999999"
+                <Motion.a
+                  href="https://wa.me/5511978749171"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -616,10 +616,10 @@ function App() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <div className="space-y-2">
-                <a href="mailto:diego@exemplo.com" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <a href="mailto:diaquinotech@gmail.com" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   E-mail
                 </a>
-                <a href="https://linkedin.com/in/diegoaquino" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <a href="https://www.linkedin.com/in/diego-aquino-dev" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   LinkedIn
                 </a>
               </div>
