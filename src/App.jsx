@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -164,13 +164,13 @@ function App() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <motion.div 
+            <Motion.div 
               className="text-2xl font-bold text-primary cursor-pointer"
               onClick={() => scrollToSection('home')}
               whileHover={{ scale: 1.05 }}
             >
               Diego Aquino
-            </motion.div>
+            </Motion.div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -202,7 +202,7 @@ function App() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <motion.div 
+          <Motion.div 
             className="md:hidden bg-background border-t"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -219,7 +219,7 @@ function App() {
                 </button>
               ))}
             </div>
-          </motion.div>
+          </Motion.div>
         )}
       </nav>
 
@@ -227,7 +227,7 @@ function App() {
       <section id="home" className="hero-gradient min-h-screen flex items-center pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
+            <Motion.div 
               className="space-y-8"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -259,9 +259,9 @@ function App() {
                   Entre em Contato
                 </Button>
               </div>
-            </motion.div>
+            </Motion.div>
             
-            <motion.div 
+            <Motion.div 
               className="flex justify-center lg:justify-end"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -277,23 +277,23 @@ function App() {
                   <Palette className="w-8 h-8 text-accent-foreground" />
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
         
-        <motion.div 
+        <Motion.div 
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <ChevronDown className="w-6 h-6 text-muted-foreground" />
-        </motion.div>
+        </Motion.div>
       </section>
 
       {/* About Section */}
       <section id="sobre" className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <Motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -304,10 +304,10 @@ function App() {
               Quem Sou
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </motion.div>
+          </Motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div 
+            <Motion.div 
               className="space-y-6"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -320,9 +320,9 @@ function App() {
               <p className="text-lg text-muted-foreground">
                 Minha abordagem combina pesquisa de usuário, design thinking e as mais recentes tendências em interface para entregar produtos digitais que não apenas impressionam visualmente, mas também resolvem problemas reais.
               </p>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div 
+            <Motion.div 
               className="grid grid-cols-2 gap-6"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -330,7 +330,7 @@ function App() {
               viewport={{ once: true }}
             >
               {skills.map((skill, index) => (
-                <motion.div 
+                <Motion.div 
                   key={index}
                   className="text-center"
                   whileHover={{ scale: 1.05 }}
@@ -341,9 +341,9 @@ function App() {
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{skill.title}</h3>
                   <p className="text-sm text-muted-foreground">{skill.description}</p>
-                </motion.div>
+                </Motion.div>
               ))}
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </section>
@@ -351,7 +351,7 @@ function App() {
       {/* Portfolio Section */}
       <section id="portfolio" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <Motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -362,11 +362,11 @@ function App() {
               Portfólio
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </motion.div>
+          </Motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
-              <motion.div
+              <Motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -400,7 +400,7 @@ function App() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -409,7 +409,7 @@ function App() {
       {/* Services Section */}
       <section id="servicos" className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <Motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -420,11 +420,11 @@ function App() {
               Serviços
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </motion.div>
+          </Motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <Motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -440,7 +440,7 @@ function App() {
                     <p className="text-muted-foreground">{service.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -449,7 +449,7 @@ function App() {
       {/* Certificates Section */}
       <section id="certificados" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <Motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -460,11 +460,11 @@ function App() {
               Certificados
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </motion.div>
+          </Motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certificates.map((cert, index) => (
-              <motion.div
+              <Motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -490,7 +490,7 @@ function App() {
                     </Button>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -499,7 +499,7 @@ function App() {
       {/* Contact Section */}
       <section id="contato" className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <Motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -510,10 +510,10 @@ function App() {
               Entre em Contato
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </motion.div>
+          </Motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div 
+            <Motion.div 
               className="space-y-8"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -528,36 +528,36 @@ function App() {
               </div>
 
               <div className="space-y-4">
-                <motion.a 
+                <Motion.a 
                   href="mailto:diego@exemplo.com"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
                   <Mail className="w-6 h-6 text-primary" />
                   <span className="text-foreground">diego@exemplo.com</span>
-                </motion.a>
+                </Motion.a>
 
-                <motion.a 
+                <Motion.a 
                   href="https://linkedin.com/in/diegoaquino"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
                   <Linkedin className="w-6 h-6 text-primary" />
                   <span className="text-foreground">LinkedIn</span>
-                </motion.a>
+                </Motion.a>
 
-                <motion.a 
+                <Motion.a 
                   href="https://wa.me/5511999999999"
                   className="flex items-center space-x-4 p-4 bg-background rounded-lg hover:bg-accent/20 transition-colors"
                   whileHover={{ scale: 1.02 }}
                 >
                   <MessageCircle className="w-6 h-6 text-primary" />
                   <span className="text-foreground">WhatsApp</span>
-                </motion.a>
+                </Motion.a>
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -584,7 +584,7 @@ function App() {
                   </form>
                 </CardContent>
               </Card>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </section>
